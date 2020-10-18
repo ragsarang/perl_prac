@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+print "Monthly deposit amount? ";
+my $pmt = <STDIN>;
+chomp $pmt;
+
+print "Annual interrst rate? ";
+my $interest = <STDIN>;
+chomp $interest;
+
+print "Number of months of Deposits? ";
+my $mons = <STDIN>;
+chomp $mons;
+
+my $total = $pmt * ( ( (1+$interest) ** $mons) -1)  /$interest ;
+print $total;
+
+1;
